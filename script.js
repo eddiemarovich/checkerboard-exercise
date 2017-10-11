@@ -6,9 +6,13 @@ tile.style.width = '11.1%'
 tile.style.paddingBottom = '11.1%'
 tile.display = "float"
 tile.style.float = "left"
-if(i%2 === 0){
-  tile.style.backgroundColor = "red";
-}else if (i % 2 === 1){
-  tile.style.backgroundColor = "black";
+function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
 }
+tile.style.backgroundColor = getRandomColor();
 }
